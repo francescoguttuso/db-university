@@ -50,7 +50,7 @@ group by year(enrolment_date);
 -- 2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
 select office_address, count(id)
 from teachers
-group by office_address
+group by office_address;
 
 -- 3. Calcolare la media dei voti di ogni appello d'esame
 select exam_id, avg(vote)
