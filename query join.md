@@ -62,5 +62,5 @@ join exams
 on exams.id=exam_student.exam_id
 join courses
 on courses.id = exams.course_id
-where exam_student.vote >= 18
-group by students.id, courses.id;
+group by students.id, courses.id
+having max(exam_student.vote) >= 18;
